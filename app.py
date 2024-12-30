@@ -7,9 +7,9 @@ page = st.sidebar.radio("Go to", ["Home", "About Me", "Projects", "Contact"])
 
 # 홈 페이지
 if page == "Home":
-    st.title("Welcome to My Portfolio")
+    st.title("안녕하세요! AI 개발자 지망생입니다!")
     st.subheader("Explore my work and projects.")
-    image = Image.open("your_profile_picture.jpg")  # 본인 프로필 사진 경로
+    image = Image.open("img/koreaculture/스크린샷 2024-12-23 182041.png")  # 본인 프로필 사진 경로
     st.image(image, caption="Your Name", use_column_width=True)
     st.write("Hi! I'm [Your Name], a passionate developer who loves creating impactful solutions.")
 
