@@ -2,7 +2,7 @@ import streamlit as st
 from my_pages import home, about, projects_main, contact
 
 # 사이드바 메뉴
-st.sidebar.title("Portfolio Navigation")
+st.sidebar.title("Portfolio")
 page = st.sidebar.radio("Go to", ["Home", "About Me", "Projects", "Contact"])
 
 # 각 페이지 연결
