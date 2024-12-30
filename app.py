@@ -1,49 +1,16 @@
 import streamlit as st
-from PIL import Image
+from my_pages import home, about, projects_main, contact
 
-# 사이드바 설정
+# 사이드바 메뉴
 st.sidebar.title("Portfolio Navigation")
 page = st.sidebar.radio("Go to", ["Home", "About Me", "Projects", "Contact"])
 
-# 홈 페이지
+# 각 페이지 연결
 if page == "Home":
-    st.title("안녕하세요! AI 개발자 지망생입니다!")
-    st.subheader("Explore my work and projects.")
-    image = Image.open("img/koreaculture/스크린샷 2024-12-23 182041.png")  # 본인 프로필 사진 경로
-    st.image(image, caption="Your Name", use_column_width=True)
-    st.write("Hi! I'm [Your Name], a passionate developer who loves creating impactful solutions.")
-
-# 소개 페이지
+    home.app()
 elif page == "About Me":
-    st.title("About Me")
-    st.write("""
-    I'm [Your Name], a [Your Profession/Field] enthusiast. 
-    Here are a few things about me:
-    - 🌱 Currently learning [topics you're learning].
-    - 📚 Experienced in [your skills].
-    - 🎯 Goals: [your professional goals].
-    """)
-
-# 프로젝트 페이지
+    about.app()
 elif page == "Projects":
-    st.title("Projects")
-    st.write("Here are some of my recent projects:")
-    st.markdown("""
-    - **[Project 1 Name](#)**: Brief description of project 1.
-    - **[Project 2 Name](#)**: Brief description of project 2.
-    - **[Project 3 Name](#)**: Brief description of project 3.
-    """)
-    st.write("Check out more on my [GitHub](https://github.com/your_username).")
-
-# 연락처 페이지
+    projects_main.app()
 elif page == "Contact":
-    st.title("Contact Me")
-    st.write("Feel free to reach out to me through the following channels:")
-    st.markdown("""
-    - 📧 Email: [your_email@example.com](mailto:your_email@example.com)
-    - 💼 LinkedIn: [Your LinkedIn](https://linkedin.com/in/your_profile)
-    - 🐦 Twitter: [Your Twitter](https://twitter.com/your_handle)
-    """)
-
-# 실행 방법 안내
-st.sidebar.info("Run the app using `streamlit run app.py` in your terminal.")
+    contact.app()
