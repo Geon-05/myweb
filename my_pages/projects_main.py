@@ -15,11 +15,11 @@ def app():
         - **Korea Culture**: [Github](https://github.com/Geon-05/koreaculture_project1_chatbot)
         """)
     elif selected_project == "이미지 복원":
-        from my_pages.projects import project1  # 함수 내부에서 임포트
+        from my_pages.projects import project1
         project1.app()
     elif selected_project == "Youtrue":
-        from my_pages.projects import project2  # 함수 내부에서 임포트
+        from my_pages.projects import project2
         project2.app()
     elif selected_project == "Korea Culture":
-        from my_pages.projects import project3  # 함수 내부에서 임포트
+        from my_pages.projects import project3
         project3.app()
