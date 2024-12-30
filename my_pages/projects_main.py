@@ -17,6 +17,8 @@ def app():
         """)
     elif selected_project == "이미지 복원":
         project1.app()
+    # elif selected_project == "이미지 복원_mask demo":
+    #     project1_demo1_mask.app()
     elif selected_project == "Youtrue":
         project2.app()
     elif selected_project == "Korea Culture":
