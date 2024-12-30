@@ -1,11 +1,12 @@
 import streamlit as st
+from my_pages.projects import project1, project2, project3, project3_data
 
 def app():
     st.title("Projects")
     st.write("프로젝트를 소개합니다!")
 
     # 프로젝트 선택
-    selected_project = st.radio("Select a project to view details:", ["Overview", "이미지 복원", "Youtrue", "Korea Culture"])
+    selected_project = st.radio("Select a project to view details:", ["Overview", "이미지 복원", "Youtrue", "Korea Culture","Korea Culture - dataset"])
 
     if selected_project == "Overview":
         st.subheader("Project Overview")
@@ -15,11 +16,10 @@ def app():
         - **Korea Culture**: [Github](https://github.com/Geon-05/koreaculture_project1_chatbot)
         """)
     elif selected_project == "이미지 복원":
-        from my_pages.projects import project1
         project1.app()
     elif selected_project == "Youtrue":
-        from my_pages.projects import project2
         project2.app()
     elif selected_project == "Korea Culture":
-        from my_pages.projects import project3
         project3.app()
+    elif selected_project == "Korea Culture - dataset":
+        project3_data.app()
