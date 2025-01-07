@@ -204,7 +204,7 @@ def app():
 
     # --- 입력 파라미터 ---
     st.subheader("모델 & 폴더 경로 설정")
-    model_ckpt = st.text_input("모델 체크포인트 경로", value="model/color.pth")
+    model_ckpt = st.text_input("모델 체크포인트 경로", value=model_path)
     test_gray_dir = st.text_input("테스트용 흑백 이미지 폴더", value="imgpro/sampleData/test_input")
     test_mask_dir = st.text_input("테스트용 마스크 폴더", value="imgpro/sampleData/output_01_mask")
     output_dir = st.text_input("결과 저장 폴더", value="imgpro/sampleData/tmp")
