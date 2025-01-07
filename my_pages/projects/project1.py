@@ -12,8 +12,8 @@ from torchvision.models import resnet50, ResNet50_Weights
 import subprocess
 
 # Streamlit Secrets로 Kaggle API Key 설정
-os.environ["KAGGLE_USERNAME"] = st.secrets["KAGGLE_USERNAME"]
-os.environ["KAGGLE_KEY"] = st.secrets["KAGGLE_KEY"]
+os.environ["KAGGLE_USERNAME"] = st.secrets["KAGGLE"]["KAGGLE_USERNAME"]
+os.environ["KAGGLE_KEY"] = st.secrets["KAGGLE"]["KAGGLE_KEY"]
 
 # Kaggle 데이터셋 다운로드
 DATASET_NAME = "geon05/dacon_image/pyTorch/default"
