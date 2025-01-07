@@ -1,5 +1,5 @@
 pandas
 openpyxl
-opencv-python
+opencv-python-headless
 kaggle
 torch
