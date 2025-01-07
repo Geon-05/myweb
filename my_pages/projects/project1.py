@@ -17,7 +17,7 @@ os.environ["KAGGLE_USERNAME"] = st.secrets["KAGGLE_USERNAME"]
 os.environ["KAGGLE_KEY"] = st.secrets["KAGGLE_KEY"]
 
 # Kaggle 데이터셋 다운로드
-DATASET_NAME = "geon05/dacon_image"
+DATASET_NAME = "geon05/dacon_image/pyTorch/default"
 
 # (1) 다운로드할 폴더 지정
 DOWNLOAD_DIR = "downloads"   # 원하는 폴더 경로(없으면 자동 생성됨)
