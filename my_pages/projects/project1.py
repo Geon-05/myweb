@@ -9,6 +9,31 @@ import cv2
 from torchvision import transforms, models
 from torchvision.models import resnet50, ResNet50_Weights
 
+import subprocess
+import zipfile
+
+# Streamlit Secrets로 Kaggle API Key 설정
+os.environ["KAGGLE_USERNAME"] = st.secrets["KAGGLE_USERNAME"]
+os.environ["KAGGLE_KEY"] = st.secrets["KAGGLE_KEY"]
+
+# Kaggle 데이터셋 다운로드
+DATASET_NAME = "geon05/dacon_image"
+
+# (1) 다운로드할 폴더 지정
+DOWNLOAD_DIR = "downloads"   # 원하는 폴더 경로(없으면 자동 생성됨)
+ZIP_FILENAME = "dacon_image.zip"  # 실제로 생성될 zip 파일명(데이터셋 이름과 동일하거나, Kaggle에서 제공하는 파일명과 맞춰주세요)
+
+# (2) Kaggle 데이터셋 다운로드
+subprocess.run([
+    "kaggle", "datasets", "download",
+    "-d", DATASET_NAME,
+    "-p", DOWNLOAD_DIR,   # 원하는 다운로드 경로
+    "--unzip"             # 자동으로 압축해제까지 원하시면 주석 해제
+])
+
+# 모델 파일 경로
+model_path = "downloads/color.pth"
+
 def app():
     st.title("이미지 색상화 및 손실 부분 복원 AI 경진대회")
     st.write("알고리즘 | 월간 데이콘 | 비전 | 이미지 복원 | 이미지 색상화 | SSIM")
