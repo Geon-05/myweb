@@ -3,3 +3,4 @@ openpyxl
 opencv-python-headless
 kaggle
 torch
+torchvision
